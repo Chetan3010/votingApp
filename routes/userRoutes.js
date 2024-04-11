@@ -57,7 +57,7 @@ userRoutes.put('/profile/password', jwtAuthMiddleware, async (req, res) => {
         // })
         const user = await User.findById(userId)
         user.password = password
-        user.save()
+        await user.save()
         return res.status(200).json({ message: "Password updated successfully." })
     } catch (err) {
         console.log(err);
