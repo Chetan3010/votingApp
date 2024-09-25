@@ -1,6 +1,6 @@
 const express = require('express')
-const Candidate = require('../models/candidate')
-const User = require('../models/user')
+const Candidate = require('../models/Candidate')
+const User = require('../models/User')
 const { jwtAuthMiddleware } = require('../jwt')
 const candidateRoutes = express.Router()
 
