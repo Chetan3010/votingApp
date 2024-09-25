@@ -5,7 +5,6 @@ const { jwtAuthMiddleware } = require('../jwt')
 const candidateRoutes = express.Router()
 
 const checkAdminRole = async (userId) => {
-
     const user = await User.findById(userId)
     if (user.role === "admin") {
         return true

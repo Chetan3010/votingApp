@@ -7,7 +7,6 @@ userRoutes.post('/signup', async (req, res) => {
     try {
         const user = new User(req.body)
         const response = await user.save()
-
         return res.status(200).json({ message: "Account created successfully." })
 
     } catch (err) {
